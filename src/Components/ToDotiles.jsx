@@ -5,7 +5,7 @@ import "../Styles/ToDoDrid.css"
 function ToDotiles() {
   const [data,setdata]=useContext(TodoContext1)
   console.log(setdata)
-  const alldata=data.filter((item)=>item.status=='pending' ||item.status=='completed')
+  const alldata=data.filter((item)=>item.status==='pending' ||item.status==='completed')
 
 
 
