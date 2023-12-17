@@ -1,7 +1,3 @@
-/* * {
-  padding: 0;
-  margin: 0;
-} */
 
 .navholder1 {
   width: 100%;
@@ -42,9 +38,9 @@
 }
 
 @media only screen and (max-width: 555px) {
-/* Apply styles for screens up to 525px wide */
+
 .navholder {
-  padding: 0 20px; /* Adjust padding for smaller screens */
+  padding: 0 20px; /
 }
 
 .bin{
