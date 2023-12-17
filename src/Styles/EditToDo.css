@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.editpage {
+  width: 100%;
+  height: 100vh;
+  background-color: #092635;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.edittile {
+  /* background-color: wheat; */
+  width: 350px;
+  height: 200px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.453);
+}
+.leftstatusBar {
+  background-color: #04567d;
+  /* overflow: hidden; */
+  width: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px 0px 0px 10px;
+  padding: 5px;
+}
+.leftstatusBar p {
+  color: rgba(240, 248, 255, 0.403);
+  writing-mode: vertical-rl; /* Vertical writing mode from right to left */
+  text-orientation: mixed; /* Displays the text from bottom to top */
+  white-space: nowrap; /* Prevents the text from wrapping */
+  margin-left: 5px;
+}
+.mainCont {
+  padding: 15px;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.subdiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  /* background-color: bisque; */
+}
+.subdiv input {
+  background: transparent;
+  color: white;
+  font-size: 20px;
+  border: none;
+  padding-top: 15px;
+}
+
+.timeDate {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 13px;
+  color: rgba(218, 22, 22, 0.292);
+}
+.timeDate p {
+  color: rgba(137, 130, 130, 0.422);
+}
+.mainCont button {
+  border: none;
+  background: transparent;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+}
+.leftoption {
+  display: flex;
+  gap: 20px;
+}

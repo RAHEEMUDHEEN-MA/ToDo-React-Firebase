@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.tileGrid{
+    width: 100%;
+    
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    grid-template-rows: 180px 180px 180px 180px 180px  ;
+    gap: 35px;
+}
+
+
+@media only screen and (max-width: 960px) {
+    .tileGrid {
+      /* Modify the number of columns in the grid */
+      display: grid;
+      grid-template-columns: repeat(2, 2fr); /* Two columns */
+      gap: 30px; /* Optional: Adjust the gap between tiles */
+    }
+  }
+  
+
+
+@media only screen and (max-width: 600px) {
+    .tileGrid {
+      /* Modify the number of columns in the grid */
+      display: grid;
+      grid-template-columns: repeat(1, 2fr); /* Two columns */
+      gap: 25px; /* Optional: Adjust the gap between tiles */
+    }
+  }
+
+  
+.tile{
+    /* background-color: rgba(179, 215, 245, 0.259); */
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px ;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.823);
+}
+.leftstatusBar{
+    /* background-color: #8a1212; */
+    /* overflow: hidden; */
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px 0px 0px 10px;
+    padding: 5px;
+
+}
+.leftstatusBar p{
+    color: rgba(240, 248, 255, 0.403);
+    writing-mode: vertical-rl; /* Vertical writing mode from right to left */
+    /* text-orientation: mixed; Displays the text from bottom to top */
+    white-space: nowrap; /* Prevents the text from wrapping */
+    margin-left: 5px;
+}
+.mainCont{
+    padding: 15px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    color: rgba(255, 255, 255, 0.856);
+}
+
+.subdiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    /* text-align: left; */
+    /* background-color: bisque; */
+}
+.subdiv p{
+    text-align: left;
+    padding-top: 20px;
+}
+
+.timeDate{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 13px;
+    color: rgba(218, 22, 22, 0.292);
+}
+.timeDate p{
+    color: rgba(238, 224, 224, 0.451);
+}
+.mainCont button{
+    border: none;
+    background: transparent;
+}
+#MADBtn:hover{
+    border-radius: 50%;
+    border : 1px rgb(82, 227, 82) solid;
+}
+#DLTBtn:hover{
+    border-radius: 50%;
+    border: 2px rgb(168, 89, 89) solid;
+}
+#EDITBtn:hover{
+   
+    /* border-radius: 50%; */
+    border-bottom: 2px rgb(31, 140, 224) solid;
+}
+
+#restoreBtn:hover{
+    /* border-radius: 50%;
+    border : 1px rgb(150, 182, 242) solid; */
+    height: 27px;
+}
+.options{
+    display: flex;
+    justify-content: space-between;
+}
+.leftoption{
+    display: flex;
+    gap: 20px;
+}
