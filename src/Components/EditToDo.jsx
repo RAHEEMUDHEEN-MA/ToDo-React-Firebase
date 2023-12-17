@@ -14,7 +14,7 @@ function EditToDo() {
   const history = useNavigate();
 
   useEffect(() => {
-    const temp = data.find((item) => item.id == todoid);
+    const temp = data.find((item) => item.id === todoid);
     if (temp) {
       setselectedTodo(temp);
       setEditedTodo(temp.todo);
@@ -34,7 +34,7 @@ function EditToDo() {
     const confirmation=window.confirm('save changes?');
     if(confirmation){
       const updatedData = data.map((item) =>
-      item.id == todoid ? { ...item, todo: editedTodo } : item
+      item.id ===todoid ? { ...item, todo: editedTodo } : item
     );
 
     setData(updatedData);

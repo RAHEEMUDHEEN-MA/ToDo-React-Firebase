@@ -28,12 +28,6 @@ function TodoPending() {
     
   };
 
-  const confirmDlt=()=>{
-    const confirmation=window.confirm('Are you sure ?')
-    if(confirmation){
-        
-    }
-  }
 
   const done = (id) => {
     const donearray = data.map((item) => {

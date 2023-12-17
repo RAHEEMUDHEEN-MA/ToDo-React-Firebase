@@ -1,6 +1,5 @@
 import React, { useContext } from 'react'
 import { TodoContext1 } from '../RouterToDo';
-import { Form } from 'react-router-dom';
 import restoreimg from '../assets/icons8-restore-25.png'
 
 function ToDoDeleted() {
@@ -12,7 +11,7 @@ function ToDoDeleted() {
     const confirmrestore=window.confirm(" restoring to pending todo.")
     if(confirmrestore){
       const restoredarray=data.map((item)=>{
-        if(item.id==id){
+        if(item.id===id){
             return{...item,status:"pending"}
         }
         return item

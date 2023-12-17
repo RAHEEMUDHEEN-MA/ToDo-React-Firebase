@@ -4,6 +4,7 @@ import { TodoContext1 } from '../RouterToDo';
 function ToDoCompleted() {
   const [data, setdata] = useContext(TodoContext1);
   const pendingdata=data.filter(item => item.status === 'completed');
+  console.log(setdata)
   return (
     <div className="tileGrid">
     {pendingdata.map((demo) => (
