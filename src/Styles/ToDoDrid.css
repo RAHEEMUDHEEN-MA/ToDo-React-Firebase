@@ -9,7 +9,7 @@
     
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr ;
-    grid-template-rows: 180px 180px 180px 180px 180px  ;
+    grid-template-rows: 180px 180px 180px 180px 180px  180px 180px 180px 180px 180px  ;
     gap: 35px;
 }
 
