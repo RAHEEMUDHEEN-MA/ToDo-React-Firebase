@@ -24,7 +24,7 @@ function RouterToDo() {
                     <Route path='/pending' element={<><HomeToDo/><TodoPending/></>}></Route>
                     <Route  path="/all" element={<><HomeToDo/> <ToDotiles/></>} />
                     <Route  path="/completed" element={<><HomeToDo/> <ToDoCompleted/></>} />
-                    <Route  path="/deleted" element={<><NavToDo /> <ToDoDeleted/></>} />
+                    <Route  path="/deleted" element={<> <ToDoDeleted/></>} />
                     <Route  path="/edit/:todoid" element={<> <EditToDo/></>} />
                 </Routes>
             </BrowserRouter>

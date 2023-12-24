@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { TodoContext1 } from '../RouterToDo';
 import restoreimg from '../assets/icons8-restore-25.png'
+import bin from '../assets/icons8-trash-48.png'
 
 function ToDoDeleted() {
   const [data, setdata] = useContext(TodoContext1);
@@ -23,7 +24,15 @@ function ToDoDeleted() {
 
   }
   return (
-    <div className="tileGrid loader">
+  
+    
+    <div>
+      <div className="binheader">
+        <h2>Recycle bin</h2> 
+        <img src={bin} alt="" />
+      </div>
+      <div className="tileGrid loader">
+      
       {pendingdata.map((demo) => (
         <div className="tile">
           <div
@@ -70,6 +79,7 @@ function ToDoDeleted() {
           </div>
         </div>
       ))}
+    </div>
     </div>
   );
 }

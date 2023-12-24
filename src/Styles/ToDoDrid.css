@@ -122,6 +122,20 @@
 }
 
 
+.binheader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.binheader h2{
+    color: rgba(255, 255, 255, 0.473);
+    padding: 35px;
+}
+.binheader img{
+    height: 30px;
+    filter: brightness(50%);
+}
 
 
 .loader {
