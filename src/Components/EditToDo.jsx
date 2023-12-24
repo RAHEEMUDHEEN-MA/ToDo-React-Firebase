@@ -8,13 +8,15 @@ import saveimg from '../assets/icons8-save-60.png'
 function EditToDo() {
   const [data, setData] = useContext(TodoContext1);
   const { todoid } = useParams();
+  // const { todoid } = 11
   console.log("selected id", todoid);
   const [selectedTodo, setselectedTodo] = useState("");
   const [editedTodo, setEditedTodo] = useState("");
   const history = useNavigate();
 
   useEffect(() => {
-    const temp = data.find((item) => item.id === todoid);
+    const temp = data.find((item) => item.id ==todoid);
+    // console.log("tmpopp",temp)
     if (temp) {
       setselectedTodo(temp);
       setEditedTodo(temp.todo);
@@ -34,7 +36,7 @@ function EditToDo() {
     const confirmation=window.confirm('save changes?');
     if(confirmation){
       const updatedData = data.map((item) =>
-      item.id ===todoid ? { ...item, todo: editedTodo } : item
+      item.id ==todoid ? { ...item, todo: editedTodo } : item
     );
 
     setData(updatedData);
