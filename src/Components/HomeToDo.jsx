@@ -52,8 +52,11 @@ function HomeToDo() {
 
   return (
     <div className="maindiv">
+      
       <div className="headsection">
         <img height={60} src="https://cdn-icons-png.flaticon.com/512/8832/8832108.png" alt="" />
+        
+
         <h1 className="heading">ToDo..</h1>
         
       </div>
@@ -67,7 +70,9 @@ function HomeToDo() {
         />
         <button id="addimg" type="submit">
           <img  height={30} src={addicon} alt="" />
+          
         </button>
+
       </form>
 
       <span id="lineh"></span>
