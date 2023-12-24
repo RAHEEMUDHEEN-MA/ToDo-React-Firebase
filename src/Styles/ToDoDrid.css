@@ -11,6 +11,7 @@
     grid-template-columns: 1fr 1fr 1fr 1fr ;
     grid-template-rows: 180px 180px 180px 180px 180px  180px 180px 180px 180px 180px  ;
     gap: 35px;
+    
 }
 
 
@@ -118,4 +119,21 @@
 .leftoption{
     display: flex;
     gap: 20px;
+}
+
+
+
+
+.loader {
+    animation: loader 0.5s linear forwards;
+   
+}
+
+@keyframes loader {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }

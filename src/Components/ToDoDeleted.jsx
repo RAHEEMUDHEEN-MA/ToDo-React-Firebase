@@ -23,7 +23,7 @@ function ToDoDeleted() {
 
   }
   return (
-    <div className="tileGrid">
+    <div className="tileGrid loader">
       {pendingdata.map((demo) => (
         <div className="tile">
           <div

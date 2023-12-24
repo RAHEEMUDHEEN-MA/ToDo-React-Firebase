@@ -22,7 +22,7 @@ function TodoPending() {
         return item;
       });
       setdata(deletedarray);
-    console.log("final", data);
+    console.log("final", data); 
     }
     
     
@@ -39,7 +39,7 @@ function TodoPending() {
     setdata(donearray);
   };
   return (
-    <div className="tileGrid">
+    <div className="tileGrid loader">
     {pendingdata.map((demo) => (
       <div className="tile" key={demo.id}>
         <div className="leftstatusBar" style={{ backgroundColor: "#04567D" }}>

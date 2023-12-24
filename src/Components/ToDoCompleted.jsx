@@ -6,7 +6,7 @@ function ToDoCompleted() {
   const pendingdata=data.filter(item => item.status === 'completed');
   console.log(setdata)
   return (
-    <div className="tileGrid">
+    <div className="tileGrid loader">
     {pendingdata.map((demo) => (
       <div className="tile">
         <div className="leftstatusBar" style={{

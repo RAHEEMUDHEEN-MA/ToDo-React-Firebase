@@ -8,6 +8,7 @@ import ToDoCompleted from './Components/ToDoCompleted';
 import ToDoDeleted from './Components/ToDoDeleted';
 import EditToDo from './Components/EditToDo';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import NavToDo from './Components/NavToDo';
 
 const TodoContext1=createContext();
 
@@ -23,7 +24,7 @@ function RouterToDo() {
                     <Route path='/pending' element={<><HomeToDo/><TodoPending/></>}></Route>
                     <Route  path="/all" element={<><HomeToDo/> <ToDotiles/></>} />
                     <Route  path="/completed" element={<><HomeToDo/> <ToDoCompleted/></>} />
-                    <Route  path="/deleted" element={<><HomeToDo/> <ToDoDeleted/></>} />
+                    <Route  path="/deleted" element={<><NavToDo /> <ToDoDeleted/></>} />
                     <Route  path="/edit/:todoid" element={<> <EditToDo/></>} />
                 </Routes>
             </BrowserRouter>

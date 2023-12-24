@@ -11,7 +11,7 @@ function ToDotiles() {
 
 
   return (
-    <div className="tileGrid">
+    <div className="tileGrid loader">
     {alldata.map((demo) => (
       <div className="tile" key={demo.id}>
         <div className="leftstatusBar" style={{
