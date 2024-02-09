@@ -32,6 +32,13 @@
   border-bottom: solid tomato 4px;
 }
 
+.linkss:visited
+{
+  color: white;
+  border-bottom: solid tomato 4px;
+}
+
+
 .bin:hover{
   color: white;
   border-bottom: solid tomato 4px;
