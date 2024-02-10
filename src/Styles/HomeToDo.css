@@ -1,93 +1,136 @@
-*{
-    margin: 0;
-    padding: 0;
-   
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.maindiv{
-    width: 100%;
-    
-    display: flex;
-    flex-direction: column;
-    
-    align-items: center;
-   
+.maindiv {
+  width: 100%;
+  /* background-color: aqua; */
 
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
 }
 
-
-.headsection{
-    
-    padding: 30px 0px;
-    display: flex;
-
+.headsection {
+  padding: 30px 0px;
+  display: flex;
+}
+.proifle {
+  position: absolute;
+  right: 70px;
+  top: 50px;
+}
+.proifle img {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  border: 6px solid #1d56729e;
+}
+.proifle :hover {
+  border: 6px solid rgba(29, 86, 114, 0.84);
+  right: 69px;
+  top: 49px;
+  cursor: pointer;
 }
 
-.maindiv h1{
-    font-size: 50px;
-    color: #fff;
-    font-weight: 800;
-    padding-right: 100px;
+.profile-details {
+  position: absolute;
+  right: 69px;
+  top: 49px;
+  color: white;
+  transform: translateX(-50%);
+  background-color: #ffffff0a;
+  padding: 10px;
+  border: 1px solid #cccccc2e;
+  border-radius: 5px;
+  display: none; /* Hide the box by default */
 }
 
-.maindiv input{
-   background-color:rgba(255, 255, 255, 0.097);
-    border: none;
-    
-    border-radius: 6px;
-    padding: 20px;
-    width: 400px;
-    height: 10px;
-    font-size: 17px;
-    color: white;
-}
-.maindiv button{
-    /* background-color: #F40B48; */
-    background-color:rgba(255, 255, 255, 0.097);
-
-    /* padding: 20px 25px; */
-    border: none;
-    border-radius: 7px;
-    margin-left: 20px;
-    padding: 5px;
+.proifle:hover .headsection {
+  display: flex;
+  background-color: red;
 }
 
-@media only screen and (max-width:960px){
-    .maindiv input{
-        padding: 15px;
-        width: 350px;
-    }
+.maindiv h1 {
+  font-size: 50px;
+  color: #fff;
+  font-weight: 800;
+  padding-right: 100px;
 }
 
+.maindiv input {
+  background-color: rgba(255, 255, 255, 0.097);
+  border: none;
 
-@media only screen and (max-width:720px){
-    .maindiv input{
-        padding: 15px;
-        width: 300px;
-    }
+  border-radius: 6px;
+  padding: 20px;
+  width: 400px;
+  height: 10px;
+  font-size: 17px;
+  color: white;
 }
-@media only screen and (max-width:640px){
-    .maindiv input{
-        padding: 15px;
-        width: 270px;
-    }
-}
+.maindiv button {
+  background-color: rgba(255, 255, 255, 0.097);
+  display: flex;
 
-#lineh{
-    margin-top: 50px;
-    margin-bottom: 25px;
-    box-shadow: 0px 0px 1px rgb(91, 91, 123);
-    width: 80%;
-    height: 1px;
-}
-.maindiv form{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+  border: none;
+  border-radius: 7px;
+  margin-left: 20px;
+  padding: 10px;
 }
 
+@media only screen and (max-width: 960px) {
+  .maindiv input {
+    padding: 15px;
+    width: 350px;
+  }
+}
 
-#addimg:hover{
-background-color: rgba(26, 165, 96, 0.582);}
+@media only screen and (max-width: 720px) {
+  .maindiv input {
+    padding: 15px;
+    width: 300px;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .maindiv input {
+    padding: 15px;
+    width: 210px;
+    height: 30px;
+  }
+  .proifle {
+    position: absolute;
+    right: 25px;
+    top: 32px;
+  }
+  .proifle img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 4px solid #1d56729e;
+  }
+}
 
+#lineh {
+  margin-top: 50px;
+  margin-bottom: 25px;
+  box-shadow: 0px 0px 1px rgb(91, 91, 123);
+  width: 80%;
+  height: 1px;
+}
+.maindiv form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#addimg:hover {
+  background-color: rgba(26, 165, 96, 0.582);
+}
+
+#addimg {
+  background-color: rgba(26, 165, 96, 0.359);
+}
