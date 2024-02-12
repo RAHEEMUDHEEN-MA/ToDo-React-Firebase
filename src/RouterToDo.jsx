@@ -1,6 +1,6 @@
 import React, { createContext, useEffect, useState } from "react";
-import ToDodata from "./ToDoData";
-import "./Styles/Signinpage.css"
+// import ToDodata from "./ToDoData";
+import "./Styles/Signinpage.css";
 import HomeToDo from "./Components/HomeToDo";
 import TodoPending from "./Components/TodoPending";
 import ToDotiles from "./Components/ToDotiles";
@@ -108,10 +108,19 @@ function RouterToDo() {
             justifyContent: "center",
           }}
         >
-          <div  style={{display:"flex",flexDirection:"column",gap:"15px",justifyContent:"center",alignItems:"center"}}>
+          <div
+            style={{
+              width:"100%",
+              display: "flex",
+              flexDirection: "column",
+              gap: "15px",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
             {" "}
             <div
-            className="signinmaincontainer"
+              className="signinmaincontainer"
               style={{
                 display: "flex",
                 backgroundColor: "",
@@ -120,28 +129,30 @@ function RouterToDo() {
               }}
             >
               <img
-             
+                id="tickimg"
                 height={120}
                 src="https://cdn-icons-png.flaticon.com/512/8832/8832108.png"
                 alt=""
               />
 
               <h1
-                className="heading"
+                className="headingH1"
                 style={{ color: "white", fontSize: "70px" }}
               >
-                ToDo <span className="dot1">.</span> <span className="dot2">.</span><span className="dot3">.</span>
+                ToDo <span className="dot1">.</span>{" "}
+                <span className="dot2">.</span>
+                <span className="dot3">.</span>
               </h1>
             </div>
             <div
-            className="siginContainer"
+              className="siginContainer"
               style={{
                 display: "flex",
               }}
             >
               {" "}
               <button
-              className="singInBTN"
+                className="singInBTN"
                 style={{
                   display: "flex",
                   borderRadius: "4px",
@@ -153,13 +164,21 @@ function RouterToDo() {
                 }}
                 onClick={signInWithgoogle}
               >
-                <img className="googleICON"
+                <img
+                  className="googleICON"
                   src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/2048px-Google_%22G%22_logo.svg.png"
-                  style={{ backgroundColor: "white", margin: "2px", padding:"10px",borderRadius: "2px" }}
+                  style={{
+                    backgroundColor: "white",
+                    margin: "2px",
+                    padding: "10px",
+                    borderRadius: "2px",
+                  }}
                   alt=""
                   height={25}
                 />
-                <div style={{ padding: "5px",fontWeight:"500" }}>Sign in with google</div>
+                <div style={{ padding: "5px", fontWeight: "500" }}>
+                  Sign in with google
+                </div>
               </button>
             </div>
           </div>

@@ -4,11 +4,11 @@
 @keyframes slideInFromBottom {
   from {
     transform: translateY(150%);
-    opacity: 0; /* Start with opacity 0 (completely transparent) */
+    opacity: 0; 
   }
   to {
     transform: translateY(0);
-    opacity: 1; /* End with opacity 1 (fully visible) */
+    opacity: 1;
   }
 }
 
@@ -22,12 +22,12 @@
 
 @keyframes slideInFromTop {
   from {
-    transform: translateY(-100%); /* Start position: move from top */
-    opacity: 0; /* Start with opacity 0 (completely transparent) */
+    transform: translateY(-100%); 
+    opacity: 0; 
   }
   to {
-    transform: translateY(0); /* End position: move to original position */
-    opacity: 1; /* End with opacity 1 (fully visible) */
+    transform: translateY(0); 
+    opacity: 1; 
   }
 }
 
@@ -44,15 +44,31 @@
   animation: slideInFromTopslow 2.1s forwards infinite;
 }
 .dot3 {
-  /* margin-left: -19px; */
+
   animation: slideInFromTopslow 2.2s forwards infinite;
 }
 
 @keyframes slideInFromTopslow {
   from {
-    opacity: 0; /* Start with opacity 0 (completely transparent) */
+    opacity: 0;
   }
   to {
-    opacity: 1; /* End with opacity 1 (fully visible) */
+    opacity: 1; 
   }
+}
+
+@media only screen and (max-width:600px) {
+    #tickimg{
+    
+        height: 100px;
+    }
+    .headingH1{
+    
+       display: flex;
+    }
+    .dot1 {
+        margin-left: -1px;
+        
+      }
+     
 }
