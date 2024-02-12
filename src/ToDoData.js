@@ -81,6 +81,6 @@ const ToDodataArray = [
   const lastObjectId = ToDodataArray[ToDodataArray.length - 1].id;
   
   
-  export default ToDodataArray;
-  export {lastObjectId}
+  // export default ToDodataArray;
+  // export {lastObjectId}
   

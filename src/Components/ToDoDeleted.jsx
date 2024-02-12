@@ -2,23 +2,37 @@ import React, { useContext } from 'react'
 import { TodoContext1 } from '../RouterToDo';
 import restoreimg from '../assets/icons8-restore-25.png'
 import bin from '../assets/icons8-trash-48.png'
+import { doc, updateDoc } from 'firebase/firestore';
+import { db } from '../Firebase';
 
 function ToDoDeleted() {
-  const [data, setdata] = useContext(TodoContext1);
+  const [data, setdata,user] = useContext(TodoContext1);
   const pendingdata = data.filter((item) => item.status === "deleted");
 
  
-  const restoretodo=(id)=>{
+  const restoretodo=async(id)=>{
     const confirmrestore=window.confirm(" restoring to pending todo.")
     if(confirmrestore){
-      const restoredarray=data.map((item)=>{
-        if(item.id===id){
-            return{...item,status:"pending"}
-        }
-        return item
-  
-      })
-      setdata(restoredarray)
+
+      try {
+        const docreff=doc(db,"todoUser",user.email,"todos",id)
+        await updateDoc(docreff,{
+          status:"pending"
+        })
+        const restoredarray=data.map((item)=>{
+          if(item.id===id){
+              return{...item,status:"pending"}
+          }
+          return item
+    
+        })
+        setdata(restoredarray)
+        
+      } catch (error) {
+        console.log("error in restoring todo ",error)
+      }
+
+   
     }
     
 
@@ -45,7 +59,7 @@ function ToDoDeleted() {
                   ? "blue"
                   : demo.status === "deleted"
                   ? "#8a1212"
-                  : "black", // Default color or any other color for unrecognized statuses
+                  : "black", 
             }}
           >
             <p>{demo.status}</p>
@@ -60,14 +74,7 @@ function ToDoDeleted() {
 
               <div className="options">
                 <div className="leftoption">
-                  {/* <button onClick={() => done(demo.id)}>
-                    <img id="MADBtn" height={19} src={completedImage} alt="" />
-                  </button>
-                  <Link style={{ padding: "0" }} to={`/edit/${demo.id}`}>
-                    <button>
-                      <img id="EDITBtn" height={19} src={editimg} alt="" />
-                    </button>
-                  </Link> */}
+            
                 </div>
                 <div className="rightoption">
                   <button onClick={() => restoretodo(demo.id)}>

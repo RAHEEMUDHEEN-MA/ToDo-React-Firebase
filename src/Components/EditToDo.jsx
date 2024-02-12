@@ -1,12 +1,13 @@
-import '../Styles/EditToDo.css'
-import React, { useContext, useEffect, useState } from 'react'
-import { TodoContext1 } from '../RouterToDo';
-import { useNavigate, useParams } from 'react-router-dom';
-import saveimg from '../assets/icons8-save-60.png'
-
+import "../Styles/EditToDo.css";
+import React, { useContext, useEffect, useState } from "react";
+import { TodoContext1 } from "../RouterToDo";
+import { useNavigate, useParams } from "react-router-dom";
+import saveimg from "../assets/icons8-save-60.png";
+import { doc, updateDoc } from "firebase/firestore";
+import { db } from "../Firebase";
 
 function EditToDo() {
-  const [data, setData] = useContext(TodoContext1);
+  const [data, setData, user] = useContext(TodoContext1);
   const { todoid } = useParams();
   // const { todoid } = 11
   console.log("selected id", todoid);
@@ -15,34 +16,39 @@ function EditToDo() {
   const history = useNavigate();
 
   useEffect(() => {
-    const temp = data.find((item) => item.id ===todoid);
-    // console.log("tmpopp",temp)
+    const temp = data.find((item) => item.id === todoid);
     if (temp) {
       setselectedTodo(temp);
       setEditedTodo(temp.todo);
     }
-  }, [data, todoid]);
+  }, [todoid]);
 
-  console.log("selected edit data ", selectedTodo);
+  // console.log("selected edit data ", selectedTodo);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    confirm();
-
-   
+    confirm(todoid);
   };
 
-  const confirm=()=>{
-    const confirmation=window.confirm('save changes?');
-    if(confirmation){
-      const updatedData = data.map((item) =>
-      item.id ===todoid ? { ...item, todo: editedTodo } : item
-    );
-
-    setData(updatedData);
-    history("/");
+  const confirm = async (id) => {
+    const confirmation = window.confirm("save changes?");
+    if (confirmation) {
+      try {
+        console.log("editing id", id);
+        const todoReff = doc(db, "todoUser", user.email, "todos", todoid);
+        await updateDoc(todoReff, {
+          todo: editedTodo,
+        });
+        const updatedData = data.map((item) =>
+          item.id === todoid ? { ...item, todo: editedTodo } : item
+        );
+        setData(updatedData);
+        history(-1);
+      } catch (error) {
+        console.log("error in editing todo", error);
+      }
     }
-  }
+  };
 
   return (
     <div className="editpage">

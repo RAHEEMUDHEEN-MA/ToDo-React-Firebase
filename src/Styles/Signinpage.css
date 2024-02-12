@@ -1,0 +1,58 @@
+.siginContainer {
+  animation: slideInFromBottom 1.5s forwards;
+}
+@keyframes slideInFromBottom {
+  from {
+    transform: translateY(150%);
+    opacity: 0; /* Start with opacity 0 (completely transparent) */
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1; /* End with opacity 1 (fully visible) */
+  }
+}
+
+.singInBTN {
+  opacity: 100%;
+}
+.singInBTN:hover {
+  cursor: pointer;
+  opacity: 100%;
+}
+
+@keyframes slideInFromTop {
+  from {
+    transform: translateY(-100%); /* Start position: move from top */
+    opacity: 0; /* Start with opacity 0 (completely transparent) */
+  }
+  to {
+    transform: translateY(0); /* End position: move to original position */
+    opacity: 1; /* End with opacity 1 (fully visible) */
+  }
+}
+
+.signinmaincontainer {
+  animation: slideInFromTop 1s forwards;
+}
+
+.dot1 {
+  margin-left: -15px;
+  animation: slideInFromTopslow 2s forwards infinite;
+}
+.dot2 {
+  margin-left: -17px;
+  animation: slideInFromTopslow 2.1s forwards infinite;
+}
+.dot3 {
+  /* margin-left: -19px; */
+  animation: slideInFromTopslow 2.2s forwards infinite;
+}
+
+@keyframes slideInFromTopslow {
+  from {
+    opacity: 0; /* Start with opacity 0 (completely transparent) */
+  }
+  to {
+    opacity: 1; /* End with opacity 1 (fully visible) */
+  }
+}

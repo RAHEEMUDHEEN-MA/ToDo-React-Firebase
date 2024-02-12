@@ -3,6 +3,7 @@ import { TodoContext1 } from '../RouterToDo';
 
 function ToDoCompleted() {
   const [data, setdata] = useContext(TodoContext1);
+  console.log("todo data at completed page :",data)
   const pendingdata=data.filter(item => item.status === 'completed');
   console.log(setdata)
   return (
