@@ -1,4 +1,4 @@
-import React, { createContext, useEffect, useState } from "react";
+import React, { createContext, useState } from "react";
 // import ToDodata from "./ToDoData";
 import "./Styles/Signinpage.css";
 import HomeToDo from "./Components/HomeToDo";
@@ -9,8 +9,7 @@ import ToDoDeleted from "./Components/ToDoDeleted";
 import EditToDo from "./Components/EditToDo";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { auth } from "./Firebase";
-import { signInWithPopup, GoogleAuthProvider, getAuth } from "firebase/auth";
-import { googeleIcon } from "../src/assets/icons8-checkmark-25.png";
+import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 
 const TodoContext1 = createContext();
 

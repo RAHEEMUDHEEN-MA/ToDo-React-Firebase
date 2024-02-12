@@ -1,5 +1,5 @@
 import "../Styles/ToDoDrid.css";
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect } from "react";
 import { TodoContext1 } from "../RouterToDo";
 import { Link } from "react-router-dom";
 import completedImage from "../assets/icons8-checkmark-25.png";
@@ -7,7 +7,7 @@ import editimg from "../assets/icons8-edit-25 (1).png";
 import dltimg from "../assets/icons8-delete-25 (2).png";
 import { collection, getDocs, doc, updateDoc } from "firebase/firestore";
 import { db } from "../Firebase";
-import HomeToDo from "./HomeToDo";
+
 
 function TodoPending() {
   const [data, setdata, user] = useContext(TodoContext1);

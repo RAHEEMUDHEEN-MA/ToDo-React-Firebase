@@ -9,7 +9,7 @@ import { db } from "../Firebase";
 function EditToDo() {
   const [data, setData, user] = useContext(TodoContext1);
   const { todoid } = useParams();
-  // const { todoid } = 11
+
   console.log("selected id", todoid);
   const [selectedTodo, setselectedTodo] = useState("");
   const [editedTodo, setEditedTodo] = useState("");
@@ -21,9 +21,8 @@ function EditToDo() {
       setselectedTodo(temp);
       setEditedTodo(temp.todo);
     }
-  }, [todoid]);
+  }, [data,todoid]);
 
-  // console.log("selected edit data ", selectedTodo);
 
   const handleSubmit = (e) => {
     e.preventDefault();

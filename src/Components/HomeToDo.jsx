@@ -1,12 +1,10 @@
 import React, { useContext, useEffect, useState } from "react";
-// import { lastObjectId } from "../ToDoData";
 import addicon from "../assets/icons8-add-40.png";
 import { TodoContext1 } from "../RouterToDo";
 import NavToDo from "./NavToDo";
 import "../Styles/HomeToDo.css";
 import { db } from "../Firebase";
-import { collection, addDoc, doc, loadBundle } from "firebase/firestore";
-import { useNavigate } from "react-router-dom";
+import { collection, addDoc,  } from "firebase/firestore";
 
 function HomeToDo() {
   const [data, setdata, user] = useContext(TodoContext1);
@@ -14,7 +12,6 @@ function HomeToDo() {
   const [adate, setadate] = useState();
   const [atime, setatime] = useState("");
   const [showprofile, setshowprofile] = useState(false);
-  const history=useNavigate()
   useEffect(() => {
     const currentDate = new Date();
 
