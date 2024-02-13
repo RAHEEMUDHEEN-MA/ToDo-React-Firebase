@@ -16,7 +16,6 @@ function HomeToDo() {
 
   useEffect(() => {
     const currentDate = new Date();
-
     const formattedDate = currentDate.toISOString().slice(0, 10);
     const formattedTime = currentDate.toLocaleTimeString([], {
       hour: "2-digit",
@@ -25,9 +24,10 @@ function HomeToDo() {
 
     setadate(formattedDate);
     setatime(formattedTime);
-    // setastatus("pending");
   }, [atodo]);
 
+  ////////////////////////////////////////////////////
+  
   const addTodo = async (e) => {
     e.preventDefault();
     try {
@@ -49,21 +49,19 @@ function HomeToDo() {
         status: "pending",
       };
       setdata([...data, newTodoItem]);
-
-      // Clear the input field after adding todo
       setatodo("");
     } catch (error) {
       console.error("Error adding todo:", error);
       alert("Error in adding todo");
     }
   };
-
+///////////////////////////////////////////
   const handleLogout = () => {
     console.log("logging out");
     localStorage.setItem("todoUser", null);
     window.location.href = "/";
   };
-
+/////////////////////////////////////////////
   const showProfile = () => {
     setshowprofile(!showprofile)
   };
@@ -98,10 +96,8 @@ function HomeToDo() {
           src="https://cdn-icons-png.flaticon.com/512/8832/8832108.png"
           alt=""
         />
-
         <h1 className="heading">ToDo..</h1>
       </div>
-
       <form onSubmit={addTodo}>
         <input
           onChange={(event) => setatodo(event.target.value)}
@@ -112,15 +108,12 @@ function HomeToDo() {
         <button id="addimg" type="submit" disabled={atodo===""}>
   <img height={30} src={addicon} alt="" />
 </button>
-
       </form>
-
       <span id="lineh"></span>
-
       <NavToDo />
     </div>
   );
 }
 
 export default HomeToDo;
-// zjhjbd
+
