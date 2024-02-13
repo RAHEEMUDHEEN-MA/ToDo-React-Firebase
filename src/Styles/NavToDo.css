@@ -10,8 +10,6 @@
   
 }
 
-
-
 .navleft,
 .navright {
   height: 100%;
@@ -25,13 +23,11 @@
   padding: 10px 20px;
   margin: 0px 15px;
 }
-
 .linkss:hover
 {
   color: white;
   border-bottom: solid tomato 4px;
 }
-
 .linkss:visited
 {
   color: white;
