@@ -57,8 +57,7 @@ function HomeToDo() {
   };
 
   const handleLogout=()=>{
-    // history(-10)
-    window.location.reload()
+    history("/")
     localStorage.setItem("todoUser",null)
   }
 
