@@ -49,7 +49,7 @@ function ToDoDeleted() {
     
     <div>
       <div className="binheader">
-        <button onClick={handleBack} style={{backgroundColor:"transparent",border:"none",color:"white"}} ><img  src={back} alt="" /></button>
+      <button onClick={handleBack} style={{backgroundColor: "transparent", border: "none", color: "white", cursor: "pointer"}}><img src={back} alt="" /></button>
         <h2>Recycle bin</h2> 
         <img src={bin} alt="" />
       </div>
