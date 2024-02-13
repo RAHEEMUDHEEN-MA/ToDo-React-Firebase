@@ -5,7 +5,7 @@ import NavToDo from "./NavToDo";
 import "../Styles/HomeToDo.css";
 import { db } from "../Firebase";
 import { collection, addDoc,  } from "firebase/firestore";
-import { useNavigate } from "react-router-dom";
+
 
 function HomeToDo() {
   const [data, setdata, user] = useContext(TodoContext1);
@@ -13,7 +13,7 @@ function HomeToDo() {
   const [adate, setadate] = useState();
   const [atime, setatime] = useState("");
   const [showprofile, setshowprofile] = useState(false);
-  const history=useNavigate()
+
   useEffect(() => {
     const currentDate = new Date();
 
@@ -58,10 +58,11 @@ function HomeToDo() {
     }
   };
 
-  const handleLogout=()=>{
-    history("/")
-    localStorage.setItem("todoUser",null)
-  }
+  const handleLogout = () => {
+    console.log("logging out");
+    localStorage.setItem("todoUser", null);
+    window.location.href = "/";
+  };
 
   const showProfile = () => {
     setshowprofile(!showprofile)
