@@ -6,6 +6,7 @@ import trash from "../assets/icons8-trash-48.png"
 function NavToDo() {
   return (
     <div className="navholder1">
+      
     <div className="navleft">
       <NavLink activeClassName="activeLinkss" className="linkss" to="/pending">
         Pending
@@ -23,6 +24,7 @@ function NavToDo() {
         <img height={35} className="bin" src={trash} alt="Trash" />
       </NavLink>
     </div>
+      
   </div>
   )
 }
