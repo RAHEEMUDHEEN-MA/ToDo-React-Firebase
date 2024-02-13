@@ -48,6 +48,7 @@
   animation: slideInFromTopslow 2.2s forwards infinite;
 }
 
+
 @keyframes slideInFromTopslow {
   from {
     opacity: 0;
@@ -69,6 +70,9 @@
     .dot1 {
         margin-left: -1px;
         
+      }
+      #totalContainer{
+        margin-bottom: 50px;
       }
      
 }

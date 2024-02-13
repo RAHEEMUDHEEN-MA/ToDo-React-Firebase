@@ -22,15 +22,14 @@ function RouterToDo() {
   const signInWithgoogle = () => {
     signInWithPopup(auth, provider)
       .then((result) => {
-        
         setUser(result.user);
-        console.log(result)
+        console.log(result);
         const googleData = {
           email: result.user.email,
           displayName: result.user.displayName,
           photoURL: result.user.photoURL,
         };
-     
+
         localStorage.setItem("todoUser", JSON.stringify(googleData)); // stringify the object before storing
       })
       .catch((error) => {
@@ -109,8 +108,9 @@ function RouterToDo() {
           }}
         >
           <div
+            id="totalContainer"
             style={{
-              width:"100%",
+              width: "100%",
               display: "flex",
               flexDirection: "column",
               gap: "15px",
