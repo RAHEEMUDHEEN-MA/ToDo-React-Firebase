@@ -13,7 +13,6 @@
 }
 
 .edittile {
-  /* background-color: wheat; */
   width: 350px;
   height: 200px;
   display: flex;
@@ -23,7 +22,6 @@
 }
 .leftstatusBar {
   background-color: #04567d;
-  /* overflow: hidden; */
   width: 10%;
   display: flex;
   align-items: center;
@@ -33,9 +31,9 @@
 }
 .leftstatusBar p {
   color: rgba(240, 248, 255, 0.403);
-  writing-mode: vertical-rl; /* Vertical writing mode from right to left */
-  text-orientation: mixed; /* Displays the text from bottom to top */
-  white-space: nowrap; /* Prevents the text from wrapping */
+  writing-mode: vertical-rl; 
+  text-orientation: mixed;
+  white-space: nowrap; 
   margin-left: 5px;
 }
 .mainCont {
@@ -50,7 +48,7 @@
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  /* background-color: bisque; */
+
 }
 .subdiv input {
   background: transparent;
