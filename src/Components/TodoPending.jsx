@@ -11,7 +11,7 @@ import { db } from "../Firebase";
 
 function TodoPending() {
   const [data, setdata, user] = useContext(TodoContext1);
-  console.log(data);
+
   useEffect(() => {
     const fetchData = async () => {
       try {

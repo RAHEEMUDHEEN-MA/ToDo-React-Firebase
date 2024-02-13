@@ -30,7 +30,7 @@ function HomeToDo() {
     e.preventDefault();
     try {
       const todoCollectionRef = collection(db, "todoUser", user.email, "todos");
-      console.log("ref", todoCollectionRef);
+  
       await addDoc(todoCollectionRef, {
         date: adate,
         time: atime,
@@ -74,7 +74,7 @@ function HomeToDo() {
     <div className="maindiv">
       <div className="headsection">
         <div title={user.displayName} className="proifle">
-          <img onClick={showProfile} src={user.photoUrl} alt="profile" />
+          <img onClick={showProfile} src={user&&user.photoURL} alt="profile" />
         </div>
         {showprofile?(  <div className="profileTile">
           <div>

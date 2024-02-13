@@ -17,19 +17,19 @@ function RouterToDo() {
   const storedData = JSON.parse(localStorage.getItem("todoUser"));
   const [data, setdata] = useState(null);
   const [user, setUser] = useState(storedData);
-  console.log("user", user);
 
   const provider = new GoogleAuthProvider();
   const signInWithgoogle = () => {
     signInWithPopup(auth, provider)
       .then((result) => {
-        setUser(result._tokenResponse);
+        
+        setUser(result.user);
         const googleData = {
-          email: result._tokenResponse.email,
-          displayName: result._tokenResponse.displayName,
-          photoUrl: result._tokenResponse.photoUrl,
+          email: result.user.email,
+          displayName: result.user.displayName,
+          photoUrl: result.user.photoURL,
         };
-        console.log(googleData);
+     
         localStorage.setItem("todoUser", JSON.stringify(googleData)); // stringify the object before storing
       })
       .catch((error) => {
