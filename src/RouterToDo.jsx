@@ -1,5 +1,5 @@
 import React, { createContext, useState } from "react";
-// import ToDodata from "./ToDoData";
+
 import "./Styles/Signinpage.css";
 import HomeToDo from "./Components/HomeToDo";
 import TodoPending from "./Components/TodoPending";
@@ -30,7 +30,7 @@ function RouterToDo() {
           photoURL: result.user.photoURL,
         };
 
-        localStorage.setItem("todoUser", JSON.stringify(googleData)); // stringify the object before storing
+        localStorage.setItem("todoUser", JSON.stringify(googleData)); 
       })
       .catch((error) => {
         console.log("error in googgle authentication :", error);
