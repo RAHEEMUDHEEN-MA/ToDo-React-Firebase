@@ -74,7 +74,7 @@ function HomeToDo() {
     <div className="maindiv">
       <div className="headsection">
         <div title={user.displayName} className="proifle">
-          <img onClick={showProfile} src={user&&user.photoURL} alt="profile" />
+          <img onClick={showProfile} src={user&&user.photoURL} alt="profile" height={81}/>
         </div>
         {showprofile?(  <div className="profileTile">
           <div>
@@ -82,7 +82,7 @@ function HomeToDo() {
             <p>{user.email}</p>
           </div>
           <div>
-            <button onClick={handleLogout}>Logout</button>
+            <button id="logoutBTN" onClick={handleLogout}>Logout</button>
           </div>
         </div>):(<></>)}
       
@@ -107,9 +107,10 @@ function HomeToDo() {
           placeholder="ToDo.."
           value={atodo}
         />
-        <button id="addimg" type="submit">
-          <img height={30} src={addicon} alt="" />
-        </button>
+        <button id="addimg" type="submit" disabled={atodo===""}>
+  <img height={30} src={addicon} alt="" />
+</button>
+
       </form>
 
       <span id="lineh"></span>

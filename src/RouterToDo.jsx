@@ -24,10 +24,11 @@ function RouterToDo() {
       .then((result) => {
         
         setUser(result.user);
+        console.log(result)
         const googleData = {
           email: result.user.email,
           displayName: result.user.displayName,
-          photoUrl: result.user.photoURL,
+          photoURL: result.user.photoURL,
         };
      
         localStorage.setItem("todoUser", JSON.stringify(googleData)); // stringify the object before storing

@@ -54,13 +54,15 @@
 }
 
 
-.profileTile div button {
+.profileTile div #logoutBTN {
   background-color: rgb(146, 9, 9);
   color: rgba(255, 255, 255, 0.707);
+  font-weight: 600;
 }
-.profileTile div button:hover {
+.profileTile div #logoutBTN:hover {
   background-color: rgb(171, 17, 17);
   color: rgb(255, 255, 255);
+  cursor: pointer;
 }
 .proifle img {
   height: 70px;
@@ -155,7 +157,7 @@
   .profileTile {
     
     right: 20px;
-    top: 110px;
+    top: 230px;
     color: rgba(255, 255, 255, 0.707);
     padding-right: 20px;
     padding-left: 30px;
@@ -181,9 +183,16 @@
 }
 
 #addimg:hover {
-  background-color: rgba(26, 165, 96, 0.582);
+ cursor: pointer;;
 }
 
 #addimg {
-  background-color: rgba(26, 165, 96, 0.359);
+  background-color: rgba(26, 165, 96, 0.801);
+}
+
+
+#addimg:disabled {
+  /* Add your desired styles for the disabled button here */
+  opacity: 0.5; /* Example: reducing opacity for disabled effect */
+  cursor: not-allowed; /* Example: changing cursor to not-allowed */
 }

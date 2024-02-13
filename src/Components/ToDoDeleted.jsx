@@ -2,10 +2,14 @@ import React, { useContext } from 'react'
 import { TodoContext1 } from '../RouterToDo';
 import restoreimg from '../assets/icons8-restore-25.png'
 import bin from '../assets/icons8-trash-48.png'
+import back from '../assets/icons8-back-50.png'
+
 import { doc, updateDoc } from 'firebase/firestore';
 import { db } from '../Firebase';
+import { useNavigate } from 'react-router-dom';
 
 function ToDoDeleted() {
+  const navigate=useNavigate()
   const [data, setdata,user] = useContext(TodoContext1);
   const pendingdata = data.filter((item) => item.status === "deleted");
 
@@ -37,11 +41,15 @@ function ToDoDeleted() {
     
 
   }
+  const handleBack=()=>{
+    navigate("/")
+  }
   return (
   
     
     <div>
       <div className="binheader">
+        <button onClick={handleBack} style={{backgroundColor:"transparent",border:"none",color:"white"}} ><img  src={back} alt="" /></button>
         <h2>Recycle bin</h2> 
         <img src={bin} alt="" />
       </div>
