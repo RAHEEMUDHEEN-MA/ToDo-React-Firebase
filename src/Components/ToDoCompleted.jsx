@@ -15,16 +15,17 @@ function ToDoCompleted() {
             }} >
           <p>{demo.status}</p>
         </div>
+        
         <div className="mainCont">
           <div className="timeDate">
             <p className="date">{demo.date}</p>
             <p className="time">{demo.time}</p>
           </div>
+          
           <div className="subdiv">
             <p>{demo.todo}</p>
-
-            
           </div>
+          
         </div>
       </div>
     ))}
