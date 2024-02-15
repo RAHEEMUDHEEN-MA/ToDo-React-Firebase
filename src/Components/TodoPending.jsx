@@ -35,19 +35,7 @@ function TodoPending() {
     fetchData();
   }, [user.email, setdata]);
 
-  // const deleteToDo = (id) => {
-  //   const confirmation = window.confirm("deleting task!");
-  //   if (confirmation) {
-  //     const deletedarray = data.map((item) => {
-  //       if (item.id === id) {
-  //         return { ...item, status: "deleted" };
-  //       }
-  //       return item;
-  //     });
-  //     setdata(deletedarray);
-  //     console.log("final", data);
-  //   }
-  // };
+
 
   const deleteToDo = async (id) => {
     const confirmation = window.confirm("deleting task!");
