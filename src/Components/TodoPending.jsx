@@ -71,7 +71,7 @@ function TodoPending() {
       });
       console.log("Todo item marked as completed.");
 
-      // Optimistic update: Mark the todo item as completed in the local state immediately
+
       setdata((prevData) => {
         return prevData.map((item) => {
           if (item.id === id) {
