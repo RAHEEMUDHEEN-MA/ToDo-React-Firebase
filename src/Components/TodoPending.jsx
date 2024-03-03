@@ -18,7 +18,7 @@ function TodoPending() {
         const todoCollectionRef = collection(
           db,
           "todoUser",
-          user.email,
+          user.uid,
           "todos"
         );
         const snapshot = await getDocs(todoCollectionRef);
@@ -33,28 +33,16 @@ function TodoPending() {
     };
 
     fetchData();
-  }, [user.email, setdata]);
+  }, [user.uid, setdata]);
 
-  // const deleteToDo = (id) => {
-  //   const confirmation = window.confirm("deleting task!");
-  //   if (confirmation) {
-  //     const deletedarray = data.map((item) => {
-  //       if (item.id === id) {
-  //         return { ...item, status: "deleted" };
-  //       }
-  //       return item;
-  //     });
-  //     setdata(deletedarray);
-  //     console.log("final", data);
-  //   }
-  // };
+ 
 
   const deleteToDo = async (id) => {
     const confirmation = window.confirm("deleting task!");
     if (confirmation) {
       try {
         console.log("iddddddddddddddddddd", id);
-        const todoDocReff = doc(db, "todoUser", user.email, "todos", id);
+        const todoDocReff = doc(db, "todoUser", user.uid, "todos", id);
         await updateDoc(todoDocReff, {
           status: "deleted"
         });
@@ -77,7 +65,7 @@ function TodoPending() {
 
   const done = async (id) => {
     try {
-      const todoDocRef = doc(db, "todoUser", user.email, "todos", id);
+      const todoDocRef = doc(db, "todoUser", user.uid, "todos", id);
       await updateDoc(todoDocRef, {
         status: "completed"
       });

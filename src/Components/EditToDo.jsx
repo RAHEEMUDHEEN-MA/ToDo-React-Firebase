@@ -34,7 +34,7 @@ function EditToDo() {
     if (confirmation) {
       try {
         console.log("editing id", id);
-        const todoReff = doc(db, "todoUser", user.email, "todos", todoid);
+        const todoReff = doc(db, "todoUser", user.uid, "todos", todoid);
         await updateDoc(todoReff, {
           todo: editedTodo,
         });

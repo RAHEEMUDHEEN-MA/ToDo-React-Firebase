@@ -10,6 +10,7 @@ import EditToDo from "./Components/EditToDo";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { auth } from "./Firebase";
 import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import ErrorPage from "./Components/ErrorPage";
 
 const TodoContext1 = createContext();
 
@@ -23,14 +24,15 @@ function RouterToDo() {
     signInWithPopup(auth, provider)
       .then((result) => {
         setUser(result.user);
-        console.log(result);
+        console.log("signupObject",result);
         const googleData = {
           email: result.user.email,
           displayName: result.user.displayName,
           photoURL: result.user.photoURL,
+          uid:result.user.uid
         };
 
-        localStorage.setItem("todoUser", JSON.stringify(googleData)); 
+        localStorage.setItem("todoUser", JSON.stringify(googleData));
       })
       .catch((error) => {
         console.log("error in googgle authentication :", error);
@@ -43,7 +45,6 @@ function RouterToDo() {
         <TodoContext1.Provider value={[data, setdata, user]}>
           <BrowserRouter>
             <Routes>
-              {/* <Route path="/signup" element={<></>} /> */}
               <Route
                 path="/"
                 element={
@@ -94,7 +95,9 @@ function RouterToDo() {
                   </>
                 }
               />
+              <Route element={<><ErrorPage/></>}/>
             </Routes>
+           
           </BrowserRouter>
         </TodoContext1.Provider>
       ) : (

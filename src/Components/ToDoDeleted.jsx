@@ -19,7 +19,7 @@ function ToDoDeleted() {
     if(confirmrestore){
 
       try {
-        const docreff=doc(db,"todoUser",user.email,"todos",id)
+        const docreff=doc(db,"todoUser",user.uid,"todos",id)
         await updateDoc(docreff,{
           status:"pending"
         })
