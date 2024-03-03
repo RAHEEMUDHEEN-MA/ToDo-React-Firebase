@@ -31,7 +31,7 @@ function HomeToDo() {
   const addTodo = async (e) => {
     e.preventDefault();
     try {
-      const todoCollectionRef = collection(db, "todoUser", user.uid, "todos");
+      const todoCollectionRef = collection(db, "todoUser", user.uid, `todos${user.displayName}`);
   
       await addDoc(todoCollectionRef, {
         date: adate,

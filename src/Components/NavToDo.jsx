@@ -8,19 +8,19 @@ function NavToDo() {
     <div className="navholder1">
       
     <div className="navleft">
-      <NavLink activeClassName="activeLinkss" className="linkss" to="/pending">
+      <NavLink activeclassname="activeLinkss" className="linkss" to="/pending">
         Pending
       </NavLink>
-      <NavLink activeClassName="activeLinkss" className="linkss" to="/completed">
+      <NavLink activeclassname="activeLinkss" className="linkss" to="/completed">
         Completed
       </NavLink>
-      <NavLink activeClassName="activeLinkss" className="linkss" to="/all">
+      <NavLink activeclassname="activeLinkss" className="linkss" to="/all">
         All
       </NavLink>
     </div>
 
     <div className="navright">
-      <NavLink activeClassName="activeLinkss" to="/deleted">
+      <NavLink activeclassname="activeLinkss" to="/deleted">
         <img height={35} className="bin" src={trash} alt="Trash" />
       </NavLink>
     </div>

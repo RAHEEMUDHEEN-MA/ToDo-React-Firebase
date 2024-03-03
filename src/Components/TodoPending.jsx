@@ -19,7 +19,7 @@ function TodoPending() {
           db,
           "todoUser",
           user.uid,
-          "todos"
+          `todos${user.displayName}`
         );
         const snapshot = await getDocs(todoCollectionRef);
         const todoList = snapshot.docs.map((doc) => ({
@@ -33,7 +33,7 @@ function TodoPending() {
     };
 
     fetchData();
-  }, [user.uid, setdata]);
+  }, [user.uid, setdata,user.displayName]);
 
   // const deleteToDo = (id) => {
   //   const confirmation = window.confirm("deleting task!");
@@ -54,7 +54,7 @@ function TodoPending() {
     if (confirmation) {
       try {
         console.log("iddddddddddddddddddd", id);
-        const todoDocReff = doc(db, "todoUser", user.uid, "todos", id);
+        const todoDocReff = doc(db, "todoUser", user.uid, `todos${user.displayName}`, id);
         await updateDoc(todoDocReff, {
           status: "deleted"
         });
@@ -77,7 +77,7 @@ function TodoPending() {
 
   const done = async (id) => {
     try {
-      const todoDocRef = doc(db, "todoUser", user.uid, "todos", id);
+      const todoDocRef = doc(db, "todoUser", user.uid, `todos${user.displayName}`, id);
       await updateDoc(todoDocRef, {
         status: "completed"
       });
